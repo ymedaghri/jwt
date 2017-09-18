@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/token")
-@Api(value = "TokenResourceAPI", produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(value = "TokenResourceAPI", description = "JWT Login API")
 public class TokenResource {
 
     private JwtGenerator jwtGenerator;
@@ -29,8 +29,6 @@ public class TokenResource {
     }
 
     @PostMapping()
-    @ApiOperation("Generate a token for a username")
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "OK", response = Retrocards.class)})
     public String generate(@RequestBody final JwtUser jwtUser) {
         return jwtGenerator.generate(jwtUser);
     }
