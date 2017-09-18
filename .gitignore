@@ -1,0 +1,26 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/build
+
+# Dependencies
+/.gradle
+
+# IDEs and editors
+/.idea
+jwt.ipr
+jwt.iml
+jwt.iws
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# System Files
+.DS_Store
+Thumbs.db
