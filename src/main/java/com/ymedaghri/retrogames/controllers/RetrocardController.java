@@ -1,4 +1,4 @@
-package com.ymedaghri.retrogames.resources;
+package com.ymedaghri.retrogames.controllers;
 
 import com.ymedaghri.retrogames.dto.Retrocards;
 import io.swagger.annotations.*;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value="/api/retrocards", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(value = "RetrocardResourceAPI", description = "Operations related to retrospectives games Cards")
-public class RetrocardResource {
+public class RetrocardController {
 
     @GetMapping
     @ApiOperation(value = "Retrieves all the retrocards", authorizations = {@Authorization(value="Authorization")})

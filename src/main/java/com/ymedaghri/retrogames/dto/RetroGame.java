@@ -1,15 +1,38 @@
 package com.ymedaghri.retrogames.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by medaghrialaouiyoussef on 18/09/2017.
  */
-public class RetroGame {
+@Entity
+public class RetroGame implements java.io.Serializable {
 
-    public String id;
-    public String name;
+    @GeneratedValue
+    @Id
+    private Long id;
 
-    public RetroGame(final String id, final String name) {
-        this.id = id;
+    private String name;
+
+    public RetroGame() {
+        // Why JPA Why ?
+    }
+
+    public RetroGame(final String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setName(final String name) {
         this.name = name;
     }
 }

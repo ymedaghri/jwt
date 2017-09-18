@@ -1,13 +1,8 @@
-package com.ymedaghri.retrogames.resources;
+package com.ymedaghri.retrogames.controllers;
 
-import com.ymedaghri.retrogames.dto.Retrocards;
 import com.ymedaghri.retrogames.security.JwtGenerator;
 import com.ymedaghri.retrogames.security.JwtUser;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/token")
 @Api(value = "TokenResourceAPI", description = "JWT Login API")
-public class TokenResource {
+public class TokenController {
 
     private JwtGenerator jwtGenerator;
 
-    public TokenResource(final JwtGenerator jwtGenerator) {
+    public TokenController(final JwtGenerator jwtGenerator) {
         this.jwtGenerator = jwtGenerator;
     }
 
-    @PostMapping()
+    @PostMapping
     public String generate(@RequestBody final JwtUser jwtUser) {
         return jwtGenerator.generate(jwtUser);
     }
