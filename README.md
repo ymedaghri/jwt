@@ -14,3 +14,13 @@ java -jar build/libs/jwt-0.0.1-SNAPSHOT.jar
 
 ### Swagger
 Swagger is accessible via its default url : http://localhost:8080/swagger-ui.html
+
+* Available API's
+  * retrocard-resource : Operations related to retrospectives games Cards
+  * token-resource : JWT Login API
+
+![Screenshot](readme_resources/swagger_1.png)
+
+## Questions
+
+Having a problem getting something to work or want to know more ? Ping me on Twitter [@ymedaghri](https://twitter.com/ymedaghri) or file a [GitHub Issue](https://github.com/ymedaghri/jwt/issues/new).
